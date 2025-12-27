@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h2>All Users</h2>
+<ul>
+    <li th:each="u : ${users}" th:text="${u.id + ' - ' + u.name}"></li>
+</ul>
+</body>
+</html>
