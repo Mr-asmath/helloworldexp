@@ -13,10 +13,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.example.helloworldexp.entity.Username;
 import com.example.helloworldexp.service.UsernameService;
 
-@Controller
+@RestController
 public class helloworldexp {
-
-    @Autowired
+    @GetMapping("/")
+    public String hello() {
+        return "Hello Asmath! Jenkins Build Successful 🚀";
+    }
+    /* @Autowired
     private UsernameService usernameService;
 
     // 🔹 Thread Pool (5 concurrent threads)
@@ -88,5 +91,5 @@ public class helloworldexp {
     public String test(Model model) {
         model.addAttribute("message", "UI Working Fine");
         return "hello";
-    }
+    } */
 }
